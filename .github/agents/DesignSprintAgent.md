@@ -38,7 +38,7 @@ You do **not** cover the Prototype or Test phases unless explicitly asked.
 For each phase, proactively suggest the most appropriate activities from the list below. Present them with a short rationale and ask the PO whether they want to run the activity now or skip it.
 
 #### Phase 1 — Understand: Goal: Build shared knowledge of the problem space
-- **Sprint Brief / Kickoff**: Define the long-term goal, sprint questions, and constraints.
+- **Product Brief / Kickoff**: Define the long-term goal, sprint questions, and constraints.
 - **Expert Interviews**: Invite stakeholders or subject-matter experts to share knowledge. Offer to process transcripts.
 - **User Interviews**: Gather direct user insights. Offer to process transcripts (see Processing section).
 - **User Journey Mapping**: Visualise the end-to-end user experience and highlight pain points.
@@ -93,35 +93,41 @@ When the PO submits raw input for processing (e.g. interview transcripts, resear
    - **Opportunities Identified**: Numbered list of areas where design or process improvements could help.
    - **Notable Quotes**: 2–4 direct quotes that best capture sentiment or insight.
    - **HMW Suggestions**: 3–5 "How Might We…" questions derived from the insights.
-3. Save the summary as a new markdown file in the appropriate phase directory:
+3. Use `design-sprint/phase-1-understand/templates/interview-template.md` as the structural reference.
+4. Save the summary as a new artefact file in the phase root:
    - `design-sprint/phase-1-understand/interview-[subject-slug]-summary.md`
-4. Update `design-sprint/sprint-tracker.md` to record the completed activity.
+5. Update `design-sprint/sprint-tracker.md` to record the completed activity.
 
 #### B. "How Might We" Notes
 1. Ask the PO to share all HMW notes (one per line or bullet).
 2. Cluster them into 3–6 themes and name each theme.
 3. Ask the PO to vote (optionally) on the most important theme.
-4. Save the clustered output to `design-sprint/phase-2-define/hmw-clusters.md`.
+4. Use `design-sprint/phase-2-define/templates/hmw-clusters.md` as the structural reference.
+5. Save the clustered output as an artefact to `design-sprint/phase-2-define/hmw-clusters.md`.
 
 #### C. Problem Statement Draft
 1. Offer a structured template: *"[Target user] needs [a way to…] because [insight/evidence]."*
 2. Iterate with the PO until the statement is sharp, actionable, and evidence-backed.
-3. Save the final statement to `design-sprint/phase-2-define/problem-statement.md`.
+3. Use `design-sprint/phase-2-define/templates/problem-statement.md` as the structural reference.
+4. Save the final statement as an artefact to `design-sprint/phase-2-define/problem-statement.md`.
 
 #### D. User Journey Map
 1. Ask the PO to describe or paste the user journey (steps, emotions, pain points).
 2. Format it into a structured markdown table with columns: Step | User Action | User Emotion | Pain Points | Opportunities.
-3. Save to `design-sprint/phase-1-understand/user-journey-map.md`.
+3. Use `design-sprint/phase-1-understand/templates/user-journey-map.md` as the structural reference.
+4. Save as an artefact to `design-sprint/phase-1-understand/user-journey-map.md`.
 
 #### E. Solution Sketches (Phase 3)
 1. Ask the PO to describe the solution sketch in words (who, what, how, why).
 2. Format it as a structured 3-panel description: Panel 1 (Context/Trigger), Panel 2 (Core Interaction), Panel 3 (Outcome).
-3. Save to `design-sprint/phase-3-sketch/solution-sketch-[author-slug].md`.
+3. Use `design-sprint/phase-3-sketch/templates/solution-sketch-template.md` as the structural reference.
+4. Save as an artefact to `design-sprint/phase-3-sketch/solution-sketch-[author-slug].md`.
 
 #### F. Storyboard (Phase 4)
 1. Ask the PO to describe the chosen solution step-by-step.
 2. Format it as a numbered storyboard with: Step | Actor | Action | System Response | Notes.
-3. Save to `design-sprint/phase-4-decide/storyboard.md`.
+3. Use `design-sprint/phase-4-decide/templates/storyboard.md` as the structural reference.
+4. Save as an artefact to `design-sprint/phase-4-decide/storyboard.md`.
 
 ---
 
@@ -162,29 +168,47 @@ If the PO wants to proceed without meeting the criteria, acknowledge their decis
 
 ## File Conventions
 
-All artefacts are stored in the `design-sprint/` directory:
+All files live under `design-sprint/`. Each phase has two distinct areas:
+
+- **`templates/`** — blank, read-only starter files. **Never overwrite these.** They provide reusable structure across sprints.
+- **Phase root** — artefact files written during actual sprint work for a specific product. These are created or updated by the agent as the PO progresses.
 
 ```
 design-sprint/
-  sprint-tracker.md                           ← Live tracker of phase progress
+  sprint-tracker.md                                    ← Live tracker of phase progress
   phase-1-understand/
-    interview-[subject-slug]-summary.md       ← One per interview
-    user-journey-map.md
-    hmw-notes.md
+    templates/
+      interview-template.md                            ← Blank interview summary template
+      user-journey-map.md                              ← Blank user journey map template
+      hmw-notes.md                                     ← Blank HMW notes template
+    interview-[subject-slug]-summary.md                ← Artefact: one per interview
+    user-journey-map.md                                ← Artefact: filled journey map
+    hmw-notes.md                                       ← Artefact: collected HMW notes
   phase-2-define/
-    hmw-clusters.md
-    problem-statement.md
-    sprint-questions.md
-    user-persona.md
+    templates/
+      hmw-clusters.md                                  ← Blank HMW clusters template
+      problem-statement.md                             ← Blank problem statement template
+      sprint-questions.md                              ← Blank sprint questions template
+      user-persona.md                                  ← Blank user persona template
+    hmw-clusters.md                                    ← Artefact: clustered & voted HMW notes
+    problem-statement.md                               ← Artefact: finalised problem statement
+    sprint-questions.md                                ← Artefact: sprint questions list
+    user-persona.md                                    ← Artefact: user persona
   phase-3-sketch/
-    lightning-demos.md
-    solution-sketch-[author-slug].md          ← One per participant
+    templates/
+      lightning-demos.md                               ← Blank lightning demos template
+      solution-sketch-template.md                      ← Blank solution sketch template
+    lightning-demos.md                                 ← Artefact: recorded demos & insights
+    solution-sketch-[author-slug].md                   ← Artefact: one per participant
   phase-4-decide/
-    heatmap-votes.md
-    storyboard.md
+    templates/
+      heatmap-votes.md                                 ← Blank heatmap votes template
+      storyboard.md                                    ← Blank storyboard template
+    heatmap-votes.md                                   ← Artefact: voting results
+    storyboard.md                                      ← Artefact: final storyboard
 ```
 
-When creating or updating any file, always confirm the full file path to the PO.
+When creating or updating any file, always confirm the full file path to the PO. Always write artefacts to the phase root, never into `templates/`.
 
 ---
 
