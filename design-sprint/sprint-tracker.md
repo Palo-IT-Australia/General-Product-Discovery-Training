@@ -8,10 +8,10 @@
 
 | Field | Value |
 |---|---|
-| Product Goal | Automatically follow up with potential car buyers, increasing dealer sales conversions via an AI-enhanced platform |
+| Product Goal | _(to be defined)_ |
 | Target User | _(to be defined in Phase 2)_ |
-| Active Phase | Phase 1 — Understand |
-| Sprint Start Date | March 10, 2026 |
+| Active Phase | _(not yet started)_ |
+| Sprint Start Date | _(not yet started)_ |
 | Last Updated | _(not yet started)_ |
 
 ---
@@ -22,15 +22,16 @@
 
 | Activity | Status | Output File | Notes |
 |---|---|---|---|
-| Product Brief / Kickoff | ✅ Complete | `phase-1-understand/product-brief.md` | 1-day POC sprint |
-| Expert Interviews | ⬜ Pending | — | — |
-| User Interviews | ⬜ Pending | — | — |
-| User Journey Map | ⬜ Pending | `phase-1-understand/user-journey-map.md` | — |
-| "How Might We" Notes | ⬜ Pending | `phase-1-understand/hmw-notes.md` | — |
-| Review Existing Research | ⬜ Pending | — | — |
+| Business Question to Human Question | ⬜ Pending | — | — |
+| Interview Summary | ⬜ Pending | — | — |
+| User Journey Map | ⬜ Pending | — | — |
+| "How Might We" Notes | ⬜ Pending | — | — |
 
 **Phase 1 Completion Criteria:**
-- [ ] At least 1 Expert or User Interview summarised
+
+Either one of the activity below:
+- [ ] Business Question to Human Question completed
+- [ ] At least 1 Interview Summary completed
 - [ ] User Journey Map drafted
 - [ ] At least 5 HMW notes written
 
@@ -42,17 +43,20 @@
 
 | Activity | Status | Output File | Notes |
 |---|---|---|---|
-| Synthesise & Cluster HMW Notes | ⬜ Pending | `phase-2-define/hmw-clusters.md` | — |
-| Craft Problem Statement | ⬜ Pending | `phase-2-define/problem-statement.md` | — |
-| Identify Sprint Questions | ⬜ Pending | `phase-2-define/sprint-questions.md` | — |
-| Define User Persona(s) | ⬜ Pending | `phase-2-define/user-persona.md` | — |
-| Set Target Moment | ⬜ Pending | — | — |
+| "How Might We" Clusters | ⬜ Pending | — | — |
+| Problem Statement | ⬜ Pending | — | — |
+| Sprint Questions | ⬜ Pending | — | — |
+| User Persona | ⬜ Pending | — | — |
 
 **Phase 2 Completion Criteria:**
+
+Either one or none of the activities below:
 - [ ] HMW notes clustered and prioritised
-- [ ] Problem Statement finalised
 - [ ] At least 3 Sprint Questions listed
-- [ ] User Persona defined
+
+Both of these must be done:
+- [ ] Problem Statement finalised
+- [ ] At least one User Persona defined
 
 ---
 
@@ -62,15 +66,14 @@
 
 | Activity | Status | Output File | Notes |
 |---|---|---|---|
-| Lightning Demos | ⬜ Pending | `phase-3-sketch/lightning-demos.md` | — |
-| Crazy 8s | ⬜ Pending | — | Rapid sketching; no digital output required |
-| Solution Sketching | ⬜ Pending | `phase-3-sketch/solution-sketch-[author].md` | One per participant |
-| Silent Review | ⬜ Pending | — | — |
+| Lightning Demos | ⬜ Pending | — | — |
+| Solution Sketch | ⬜ Pending | — | One per participant |
 
 **Phase 3 Completion Criteria:**
+
+Either one of the activity below:
 - [ ] Lightning Demos completed
 - [ ] At least 1 Solution Sketch per participant recorded
-- [ ] Silent Review done
 
 ---
 
@@ -80,17 +83,13 @@
 
 | Activity | Status | Output File | Notes |
 |---|---|---|---|
-| Gallery Walk | ⬜ Pending | — | — |
-| Heatmap Voting | ⬜ Pending | `phase-4-decide/heatmap-votes.md` | — |
-| Speed Critique | ⬜ Pending | — | — |
-| Straw Poll Vote | ⬜ Pending | — | — |
-| Supervote (Decider) | ⬜ Pending | — | — |
-| Storyboard | ⬜ Pending | `phase-4-decide/storyboard.md` | — |
+| Storyboard | ⬜ Pending | — | — |
+| Story Mapping | ⬜ Pending | — | — |
 
 **Phase 4 Completion Criteria:**
-- [ ] Heatmap Vote completed
-- [ ] Supervote decision made by the Decider
+
 - [ ] Storyboard created
+- [ ] Story Mapping completed with Prototype Slice identified
 
 ---
 

@@ -65,6 +65,7 @@ For each phase, proactively suggest the most appropriate activities from the lis
 - **Straw Poll Vote**: Non-binding vote to surface favourites.
 - **Supervote (Decider)**: The appointed Decider (usually the PO) makes the final call on which solution moves forward.
 - **Storyboard**: The group maps out the selected solution as a step-by-step user journey to be prototyped.
+- **Story Mapping**: Break the chosen solution into individual user stories organised around the user journey, then prioritise them using the RICE method (Reach, Impact, Confidence, Effort) to identify the Prototype Slice — the minimum set of stories needed to validate the Problem Statement.
 
 ---
 
@@ -129,6 +130,14 @@ When the PO submits raw input for processing (e.g. interview transcripts, resear
 3. Use `design-sprint/phase-4-decide/templates/storyboard.md` as the structural reference.
 4. Save as an artefact to `design-sprint/phase-4-decide/storyboard.md`.
 
+#### G. Story Mapping (Phase 4)
+1. Load the Problem Statement from `design-sprint/phase-2-define/problem-statement.md` and the Storyboard from `design-sprint/phase-4-decide/storyboard.md` as context.
+2. Guide the group through five steps: Load Context → Identify User Activities (backbone) → Break Down into User Stories → RICE Scoring → Prioritised Story List.
+3. Calculate RICE scores automatically: (Reach × Impact × Confidence) / Effort.
+4. Ask the group to identify the Prototype Slice — the minimum set of stories to prototype.
+5. Use `design-sprint/phase-4-decide/templates/story-mapping.md` as the structural reference.
+6. Save as an artefact to `design-sprint/phase-4-decide/story-mapping.md`.
+
 ---
 
 ### 5. Sprint Tracker Maintenance
@@ -160,7 +169,7 @@ Only recommend moving to the next phase when the following minimum criteria are 
 | Phase 1 — Understand | At least 1 Expert or User Interview summarised + User Journey Map drafted + at least 5 HMW notes written |
 | Phase 2 — Define | HMW notes clustered + Problem Statement finalised + at least 3 Sprint Questions listed + User Persona defined |
 | Phase 3 — Sketch | Lightning Demos completed + at least 1 Solution Sketch per participant + Silent Review done |
-| Phase 4 — Decide | Heatmap Vote completed + Supervote decision made + Storyboard created |
+| Phase 4 — Decide | Storyboard created + Story Mapping completed with Prototype Slice identified |
 
 If the PO wants to proceed without meeting the criteria, acknowledge their decision but note what was skipped and any risk it introduces.
 
@@ -202,10 +211,10 @@ design-sprint/
     solution-sketch-[author-slug].md                   ← Artefact: one per participant
   phase-4-decide/
     templates/
-      heatmap-votes.md                                 ← Blank heatmap votes template
       storyboard.md                                    ← Blank storyboard template
-    heatmap-votes.md                                   ← Artefact: voting results
+      story-mapping.md                                 ← Blank story mapping template
     storyboard.md                                      ← Artefact: final storyboard
+    story-mapping.md                                   ← Artefact: prioritised story map with RICE scores
 ```
 
 When creating or updating any file, always confirm the full file path to the PO. Always write artefacts to the phase root, never into `templates/`.
