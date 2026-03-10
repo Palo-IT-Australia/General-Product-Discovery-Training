@@ -20,20 +20,22 @@
 
 **Status:** 🟡 Not started
 
-| Activity | Status | Output File | Notes |
-|---|---|---|---|
-| Business Question to Human Question | ⬜ Pending | — | — |
-| Interview Summary | ⬜ Pending | — | — |
-| User Journey Map | ⬜ Pending | — | — |
-| "How Might We" Notes | ⬜ Pending | — | — |
+| Activity | Required | Status | Output File | Notes |
+|---|---|---|---|---|
+| Product Brief / Kickoff | Must | ⬜ Pending | — | — |
+| User Interviews | Optional | ⬜ Pending | — | — |
+| "How Might We" Notes | Optional | ⬜ Pending | — | — |
+| User Journey Map | Optional | ⬜ Pending | — | — |
 
 **Phase 1 Completion Criteria:**
 
-Either one of the activity below:
-- [ ] Business Question to Human Question completed
-- [ ] At least 1 Interview Summary completed
+Must be done:
+- [ ] Product Brief / Kickoff completed
+
+Optionally one or more of:
+- [ ] At least 1 User Interview summarised
+- [ ] HMW notes written
 - [ ] User Journey Map drafted
-- [ ] At least 5 HMW notes written
 
 ---
 
@@ -41,21 +43,19 @@ Either one of the activity below:
 
 **Status:** 🔒 Locked (complete Phase 1 first)
 
-| Activity | Status | Output File | Notes |
-|---|---|---|---|
-| "How Might We" Clusters | ⬜ Pending | — | — |
-| Problem Statement | ⬜ Pending | — | — |
-| Sprint Questions | ⬜ Pending | — | — |
-| User Persona | ⬜ Pending | — | — |
+| Activity | Required | Status | Output File | Notes |
+|---|---|---|---|---|
+| Problem Statement | Must | ⬜ Pending | — | — |
+| "How Might We" Clusters | Optional | ⬜ Pending | — | — |
+| User Persona | Optional | ⬜ Pending | — | — |
 
 **Phase 2 Completion Criteria:**
 
-Either one or none of the activities below:
-- [ ] HMW notes clustered and prioritised
-- [ ] At least 3 Sprint Questions listed
-
-Both of these must be done:
+Must be done:
 - [ ] Problem Statement finalised
+
+Optionally one or more of:
+- [ ] HMW notes clustered and prioritised
 - [ ] At least one User Persona defined
 
 ---
@@ -64,15 +64,15 @@ Both of these must be done:
 
 **Status:** 🔒 Locked (complete Phase 2 first)
 
-| Activity | Status | Output File | Notes |
-|---|---|---|---|
-| Lightning Demos | ⬜ Pending | — | — |
-| Solution Sketch | ⬜ Pending | — | One per participant |
+| Activity | Required | Status | Output File | Notes |
+|---|---|---|---|---|
+| Crazy 8s | Must (choose one) | ⬜ Pending | — | — |
+| Solution Sketch | Must (choose one) | ⬜ Pending | — | One per participant |
 
 **Phase 3 Completion Criteria:**
 
-Either one of the activity below:
-- [ ] Lightning Demos completed
+Must complete one of:
+- [ ] Crazy 8s completed
 - [ ] At least 1 Solution Sketch per participant recorded
 
 ---
@@ -81,15 +81,33 @@ Either one of the activity below:
 
 **Status:** 🔒 Locked (complete Phase 3 first)
 
-| Activity | Status | Output File | Notes |
-|---|---|---|---|
-| Storyboard | ⬜ Pending | — | — |
-| Story Mapping | ⬜ Pending | — | — |
+| Activity | Required | Status | Output File | Notes |
+|---|---|---|---|---|
+| Storyboard | Must | ⬜ Pending | — | — |
+| Story Mapping | Must (after Storyboard) | ⬜ Pending | — | — |
 
 **Phase 4 Completion Criteria:**
 
+Must be done in order:
 - [ ] Storyboard created
 - [ ] Story Mapping completed with Prototype Slice identified
+
+---
+
+## Phase 5 — Prototype 🛠️
+
+**Status:** 🔒 Locked (complete Phase 4 first)
+
+| Activity | Required | Status | Output File | Notes |
+|---|---|---|---|---|
+| Prototype | Must | ⬜ Pending | `phase-5-prototype/prototype.md` | Digital stories built with Copilot; non-digital stories planned offline |
+
+**Phase 5 Completion Criteria:**
+
+Must be done:
+- [ ] Prototype Slice loaded and confirmed from Story Mapping
+- [ ] All digital stories prototyped with GitHub Copilot (if any)
+- [ ] Non-digital prototype plan documented with method, focus areas, and validation approach (if any)
 
 ---
 
@@ -98,12 +116,6 @@ Either one of the activity below:
 | Date | Phase | Decision | Made By |
 |---|---|---|---|
 | — | — | _(none yet)_ | — |
-
----
-
-## Sprint Questions
-
-_(To be populated in Phase 2)_
 
 ---
 
