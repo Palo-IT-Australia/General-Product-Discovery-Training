@@ -60,7 +60,7 @@ Participants must complete **one** of the following sketch activities:
 
 #### Phase 4 — Decide: Goal: Align on a solution and map it to actionable user stories
 - **Storyboard** *(Must)*: The group maps out the selected solution as a step-by-step user journey to be prototyped. This must be completed before Story Mapping.
-- **Story Mapping** *(Must — after Storyboard)*: Break the chosen solution into individual user stories organised around the user journey, then prioritise them using the RICE method (Reach, Impact, Confidence, Effort) to identify the Prototype Slice — the minimum set of stories needed to validate the Problem Statement.
+- **Story Mapping** *(Must — after Storyboard)*: Break the chosen solution into individual user stories organised around the user journey. Each story includes acceptance criteria defining what "done" looks like. Prioritise using the RICE method (Reach, Impact, Confidence, Effort) to identify the Prototype Slice — the minimum set of stories needed to validate the Problem Statement.
 
 #### Phase 5 — Prototype: Goal: Build the minimum testable artefact from the Prototype Slice
 - **Prototype** *(Must)*: Build a tangible prototype based on the Prototype Slice from Story Mapping. The agent classifies each story as Digital (GitHub Copilot can assist) or Non-Digital (must be built outside Copilot), then guides the group accordingly.
@@ -154,10 +154,17 @@ When the PO submits raw input for processing (e.g. interview transcripts, resear
 1. Load the Problem Statement from `design-sprint/phase-2-define/problem-statement.md` and the Storyboard from `design-sprint/phase-4-decide/storyboard.md` as context.
 2. Remind the PO that Story Mapping can only begin once the Storyboard has been completed in Phase 4.
 3. Guide the group through five steps: Load Context → Identify User Activities (backbone) → Break Down into User Stories → RICE Scoring → Prioritised Story List.
-4. Calculate RICE scores automatically: (Reach × Impact × Confidence) / Effort.
-5. Ask the group to identify the Prototype Slice — the minimum set of stories to prototype.
-6. Use `design-sprint/phase-4-decide/templates/story-mapping.md` as the structural reference.
-7. Save as an artefact to `design-sprint/phase-4-decide/story-mapping.md`.
+4. **For each user story, also capture acceptance criteria** — 2–3 specific, testable conditions that define when the story is complete. Format as: *"Given [context], when [action], then [outcome]."*
+5. **RICE scoring uses Fibonacci-constrained scales:**
+   - **Reach (R):** 1, 2, 3, 5, or 8 (estimated number of users affected per sprint/month)
+   - **Impact (I):** 1, 2, 3, 5, or 8 (magnitude of improvement for those users; higher = more impact)
+   - **Confidence (C):** 10%, 30%, 50%, 80%, or 100% (how confident the team is in the Reach and Impact estimates)
+   - **Effort (E):** 1, 2, 3, 5, or 8 person-weeks (total effort end-to-end; higher = more effort)
+   - **Formula:** RICE Score = (R × I × C) / E
+6. Calculate RICE scores automatically using the constrained values above.
+7. Ask the group to identify the Prototype Slice — the minimum set of stories to prototype.
+8. Use `design-sprint/phase-4-decide/templates/story-mapping.md` as the structural reference.
+9. Save as an artefact to `design-sprint/phase-4-decide/story-mapping.md`.
 
 #### J. Prototype (Phase 5)
 1. Load the Prototype Slice from `design-sprint/phase-4-decide/story-mapping.md`.
@@ -166,7 +173,12 @@ When the PO submits raw input for processing (e.g. interview transcripts, resear
    - Non-Digital: physical product mockup, printed form, service blueprint, role-play scenario, paper prototype
 3. Present the classification to the group for confirmation.
 4. **Training note to share with the group:** *"For this training session, digital stories will be prototyped first using GitHub Copilot, regardless of their RICE rank. This is intentional — our goal today is to experience Copilot-assisted prototyping. Non-digital stories are equally important in a real sprint; I'll give you a full plan to prototype those outside of today's session."*
-5. **If digital stories exist:** for each one (in RICE order), generate a tailored Copilot prompt the group can use as a starting point. Record the output file path once the build is done.
+5. **If digital stories exist:** for each one (in RICE order):
+   - Generate a tailored Copilot prompt describing what to build.
+   - **Immediately offer the PO two options:** `"Would you like me to build this now, or would you prefer to run this prompt yourself?"`
+   - **If the PO confirms for the agent to build:** write the code directly into the workspace (components, styles, app shell, and a runnable entry point such as a Vite + React app or plain HTML file). Do not stop at the prompt — produce working files.
+   - **After building:** ask the PO: `"The prototype files are ready. Would you like me to install the dependencies and start the dev server for you?"` If confirmed, run `npm install` followed by `npm run dev` in the prototype directory. Provide the localhost URL (e.g. `http://localhost:5173`) and offer to open it in the browser.
+   - Record the output file paths once the build is confirmed working.
 6. **If non-digital stories exist:** for each one, provide:
    - Prototype method (e.g. paper prototype, role-play, printed form)
    - What to build or simulate
