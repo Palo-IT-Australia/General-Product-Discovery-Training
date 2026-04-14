@@ -1,0 +1,71 @@
+# Publishes the course landing page (root/index.html) to GitHub Pages.
+#
+# After a successful run the page is available at:
+#   https://simon-palo-it.github.io/AI-Powered-Product-Ownership/
+#
+# Prerequisites (one-time, done in the repository Settings):
+#   Settings → Pages → Build and deployment → Source → GitHub Actions
+name: Deploy to GitHub Pages
+
+on:
+  # Run automatically on every push to the main branch.
+  push:
+    branches:
+      - main
+  # Allow a maintainer to trigger a deployment manually from the Actions tab.
+  workflow_dispatch:
+
+# Minimum permissions required by the GitHub Pages deployment API.
+permissions:
+  contents: read   # check out the repository
+  pages: write     # upload the Pages artifact and deploy it
+  id-token: write  # obtain an OIDC token for trusted deployment
+
+# Prevent two deployments running at the same time.
+# If a deployment is already in progress it is allowed to finish before the
+# next one starts (cancel-in-progress: false keeps the running deploy safe).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # The 'github-pages' environment is the one GitHub tracks for Pages
+    # deployments. The page_url output becomes the clickable link shown in
+    # the Actions run summary.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out the repository so the workflow can read the source files.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configure the repository for GitHub Pages (validates settings,
+      #    sets the base URL, etc.).
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 3. Bundle the contents of the root/ directory (index.html and any
+      #    supporting assets) into a Pages artifact and upload it.
+      #
+      #    IMPORTANT — path mapping:
+      #      `path: root` tells the action to treat the CONTENTS of the root/
+      #      folder as the web root, NOT the folder itself. This means:
+      #
+      #        root/index.html  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/
+      #        root/styles.css  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/styles.css
+      #
+      #    There is no /root/ segment in the published URLs.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: root
+
+      # 4. Take the uploaded artifact and publish it to GitHub Pages.
+      #    The deployment URL is captured so it can be displayed in the
+      #    environment section of the Actions run summary.
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

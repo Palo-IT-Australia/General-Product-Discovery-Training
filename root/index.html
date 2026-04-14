@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Powered Product Ownership: From Discovery to Delivery</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: #f3f2f1;
+      color: #323130;
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+    }
+
+    /* ── Card wrapper (email card aesthetic) ── */
+    .card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #EDEBE9;
+      border-radius: 4px;
+      box-shadow: 0px 0.6px 1.8px rgba(0,0,0,0.1), 0px 3.2px 7.2px rgba(0,0,0,0.13);
+      overflow: hidden;
+    }
+
+    /* ── Teal header banner ── */
+    .banner {
+      background: #038387;
+      padding: 20px 20px 24px;
+      color: #ffffff;
+    }
+    .banner h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .banner .tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 400;
+    }
+
+    /* ── Sections inside card ── */
+    .section {
+      padding: 20px;
+      border-bottom: 1px solid #EDEBE9;
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section-label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #E07B39;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #323130;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #323130;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: .95rem;
+      color: #444444;
+      margin-bottom: 10px;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Bullet list ── */
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .bullet-list li {
+      display: flex;
+      gap: 10px;
+      font-size: .95rem;
+      color: #444444;
+      padding: 5px 0;
+    }
+    .bullet-list li::before {
+      content: "·";
+      color: #323130;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    /* ── Check list ── */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      font-size: .95rem;
+      color: #323130;
+      padding: 5px 0;
+    }
+    .check-list li .check {
+      color: #E07B39;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    /* ── Two-column grid ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    @media (max-width: 540px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* ── Schedule table ── */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: .9rem;
+    }
+    .schedule-table thead tr {
+      background: #038387;
+      color: #fff;
+    }
+    .schedule-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+    .schedule-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #EDEBE9;
+      color: #444444;
+      vertical-align: middle;
+    }
+    .schedule-table tr:nth-child(even) td { background: #faf9f8; }
+    .schedule-table .phase-tag {
+      display: inline-block;
+      background: #038387;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 6px;
+    }
+    .schedule-table .break-row td { background: #f3f2f1 !important; color: #605e5c; font-style: italic; }
+    .schedule-table .lunch-row td { background: #dff6dd !important; color: #107c10; font-style: italic; }
+
+    /* ── No prereq callout ── */
+    .callout {
+      background: #fff4ce;
+      border-left: 4px solid #E07B39;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: .9rem;
+      color: #323130;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: 700px;
+      margin: 16px auto 0;
+      text-align: center;
+      font-size: .8rem;
+      color: #605e5c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Banner -->
+    <div class="banner">
+      <h1>AI-Powered Product Ownership:<br>From Discovery to Delivery</h1>
+      <p class="tagline">Hands-on training for product professionals to lead modern product discovery using AI and GitHub Copilot, powered by Palo IT's Gen-e² methodology.</p>
+    </div>
+
+    <!-- About -->
+    <div class="section" id="about">
+      <span class="section-label">About this course</span>
+      <h2>What Is This Course About?</h2>
+      <p>
+        This course equips product professionals to lead modern product discovery with confidence —
+        combining strong product ownership fundamentals with the power of Generative AI.
+        Participants develop product thinking, backlog mastery, and stakeholder skills,
+        while gaining hands-on experience using <strong>GitHub Copilot</strong> to
+        accelerate and structure product discovery.
+      </p>
+      <p>
+        Built on Palo IT's <strong>Gen-e² methodology</strong>, this course bridges timeless product
+        ownership principles with the tools shaping the future of product delivery.
+      </p>
+      <div class="two-col" style="margin-top:16px;">
+        <div>
+          <h3>🧠 Gen-e² Methodology</h3>
+          <p style="font-size:.88rem;">Palo IT's proven framework blending design thinking, agile product ownership, and Generative AI.</p>
+        </div>
+        <div>
+          <h3>🤖 GitHub Copilot for POs</h3>
+          <p style="font-size:.88rem;">Use AI as a product thinking partner — for discovery workshops, backlogs, and user stories.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section" id="benefits">
+      <span class="section-label">Benefits</span>
+      <h2>Why Should You Do It?</h2>
+      <ul class="bullet-list">
+        <li><span><strong>Further your career by mastering the skills to lead product discovery with Gen-AI</strong> — learn to use GitHub Copilot not just as a developer tool, but as a product thinking partner: structuring user needs, drafting Product Goals, generating and refining backlog items, and facilitating discovery workshops faster than ever before.</span></li>
+        <li><span><strong>Apply Gen-e² methodology to real product challenges</strong> — gain a structured, repeatable approach to product discovery, blending Design Sprint techniques with AI-assisted workflows so you can move from user need to validated backlog faster and with greater confidence.</span></li>
+      </ul>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="section" id="learning">
+      <span class="section-label">Learning Objectives</span>
+      <h2>What Will You Learn?</h2>
+      <div class="two-col">
+        <div>
+          <h3>Product Ownership Foundations</h3>
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Articulate the Product Owner's accountability within the Scrum Team and with external stakeholders</span></li>
+            <li><span class="check">✓</span><span>Understand and apply Design Sprint concepts to support Product Discovery</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>AI-Powered Product Discovery</h3>
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Apply structured prompting techniques to accelerate product discovery tasks such as persona creation, opportunity mapping, and story writing</span></li>
+            <li><span class="check">✓</span><span>Use GitHub Copilot as a product discovery tool — generating and iterating on Product Goals, Epics, User Stories, and acceptance criteria with AI assistance</span></li>
+            <li><span class="check">✓</span><span>Recognise the limitations and risks of AI-assisted product work and apply human judgement to maintain quality and alignment</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Who Should Attend -->
+    <div class="section" id="audience">
+      <span class="section-label">Who Should Attend</span>
+      <h2>Is This Course For You?</h2>
+      <p>This course is designed for anyone involved in shaping products — whether you're just starting out or looking to sharpen your edge with AI.</p>
+      <p style="margin-top:10px;"><strong>This course is for you if you are:</strong></p>
+      <ul class="bullet-list">
+        <li><span>A <strong>Business Analyst, Project Manager, or Product Manager</strong> looking to transition into a Product Owner role</span></li>
+        <li><span>A <strong>junior or aspiring Product Owner</strong> wanting a structured foundation in Scrum and modern product discovery techniques</span></li>
+        <li><span>A <strong>team lead, founder, or entrepreneur</strong> responsible for defining product direction and working closely with development teams</span></li>
+        <li><span>Anyone curious about how <strong>Generative AI can accelerate product discovery</strong> — from ideation to backlog creation</span></li>
+      </ul>
+      <div class="callout">
+        <strong>No prior Scrum experience is required.</strong> An open mindset and a curiosity for both product thinking and emerging technology is all you need to get started.
+      </div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="section" id="schedule">
+      <span class="section-label">Agenda</span>
+      <h2>Schedule for the Session</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Session</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>8:45 – 9:00</td><td>15 min</td><td>Arrival and settle down</td></tr>
+          <tr><td>9:00 – 9:15</td><td>15 min</td><td>Welcome &amp; Introduction</td></tr>
+          <tr><td>9:15 – 9:50</td><td>45 min</td><td>PO Refresher — PO's accountabilities</td></tr>
+          <tr><td>9:50 – 10:30</td><td>40 min</td><td>PO Refresher continued</td></tr>
+          <tr class="break-row"><td>10:30 – 10:45</td><td>15 min</td><td>☕ Morning break</td></tr>
+          <tr><td>10:45 – 11:00</td><td>15 min</td><td>Gen-AI Introduction</td></tr>
+          <tr><td>11:00 – 11:30</td><td>30 min</td><td>GitHub Copilot 101 and VS Code</td></tr>
+          <tr><td>11:30 – 12:00</td><td>30 min</td><td>Prompt 101</td></tr>
+          <tr class="lunch-row"><td>12:00 – 13:00</td><td>60 min</td><td>🍱 Lunch</td></tr>
+          <tr><td>13:00 – 13:15</td><td>15 min</td><td>Introduction to Design Sprint and Activity Overview</td></tr>
+          <tr><td>13:15 – 14:00</td><td>45 min</td><td><span class="phase-tag">Phase 1</span> Understand: Product Brief</td></tr>
+          <tr><td>14:00 – 14:30</td><td>30 min</td><td><span class="phase-tag">Phase 2</span> Define: Problem Statement</td></tr>
+          <tr><td>14:30 – 15:00</td><td>30 min</td><td><span class="phase-tag">Phase 3</span> Sketch: Solution Sketch</td></tr>
+          <tr class="break-row"><td>15:00 – 15:15</td><td>15 min</td><td>☕ Afternoon break</td></tr>
+          <tr><td>15:15 – 16:00</td><td>45 min</td><td><span class="phase-tag">Phase 4</span> Decide: Storyboard, Story Mapping &amp; RICE prioritisation</td></tr>
+          <tr><td>16:00 – 16:30</td><td>30 min</td><td><span class="phase-tag">Phase 5</span> Prototype: Build &amp; Demo</td></tr>
+          <tr><td>16:45 – 17:00</td><td>15 min</td><td>Wrap-up &amp; Close</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /card -->
+
+  <div class="footer">
+    <p>Delivered by <strong>Palo IT</strong> · Powered by Gen-e² methodology</p>
+  </div>
+
+</body>
+</html>
