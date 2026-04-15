@@ -1,7 +1,7 @@
 # Publishes the course landing page (root/index.html) to GitHub Pages.
 #
 # After a successful run the page is available at:
-#   https://simon-palo-it.github.io/AI-Powered-Product-Ownership/
+#   https://Palo-IT-Australia.github.io/General-Product-Discovery-Training/
 #
 # Prerequisites (one-time, done in the repository Settings):
 #   Settings → Pages → Build and deployment → Source → GitHub Actions
@@ -54,8 +54,8 @@ jobs:
       #      `path: root` tells the action to treat the CONTENTS of the root/
       #      folder as the web root, NOT the folder itself. This means:
       #
-      #        root/index.html  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/
-      #        root/styles.css  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/styles.css
+      #        root/index.html  →  https://Palo-IT-Australia.github.io/General-Product-Discovery-Training/
+      #        root/styles.css  →  https://Palo-IT-Australia.github.io/General-Product-Discovery-Training/styles.css
       #
       #    There is no /root/ segment in the published URLs.
       - name: Upload artifact
