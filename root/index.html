@@ -176,6 +176,68 @@
       border-radius: 0 4px 4px 0;
     }
 
+    /* ── Pricing cards ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 540px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .pricing-card {
+      border: 1px solid #EDEBE9;
+      border-radius: 4px;
+      padding: 16px;
+      background: #faf9f8;
+    }
+    .pricing-card h3 { margin-bottom: 6px; }
+    .pricing-amount {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #038387;
+      margin: 6px 0 2px;
+    }
+    .pricing-gst {
+      font-size: .8rem;
+      color: #605e5c;
+    }
+    .pricing-card p {
+      margin-top: 10px;
+      font-size: .88rem;
+    }
+    .callout a {
+      color: #038387;
+    }
+
+    /* ── EOI / CTA section ── */
+    .eoi-section {
+      background: #038387;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .eoi-section h2 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .eoi-section p {
+      color: rgba(255,255,255,0.9);
+      max-width: 520px;
+      margin: 0 auto 20px;
+      font-size: .95rem;
+    }
+    .eoi-btn {
+      display: inline-block;
+      background: #E07B39;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background .15s ease;
+    }
+    .eoi-btn:hover { background: #c96a2a; }
+
     /* ── Footer ── */
     .footer {
       max-width: 700px;
@@ -305,6 +367,36 @@
           <tr><td>16:45 – 17:00</td><td>15 min</td><td>Wrap-up &amp; Close</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Pricing -->
+    <div class="section" id="pricing">
+      <span class="section-label">Pricing</span>
+      <h2>How Much Does It Cost?</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>💻 1-Day Online</h3>
+          <div class="pricing-amount">$890</div>
+          <div class="pricing-gst">per person, including GST</div>
+          <p>Attend from anywhere — fully interactive virtual session with live facilitation.</p>
+        </div>
+        <div class="pricing-card">
+          <h3>🏙️ 1-Day In Person</h3>
+          <div class="pricing-amount">$1,290</div>
+          <div class="pricing-gst">per person, including GST · Sydney only</div>
+          <p>Face-to-face workshop experience with hands-on collaboration in Sydney.</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:16px;">
+        <strong>Group discount available</strong> for 8 or more participants. <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=9DauneYNTkqnGD3BHlCfOHxLskRxt29ClOwouniO3kdUMUs1WU45QUZXQlE4TVpYVjg4SVZRUkhTQy4u">Contact us</a> to discuss further.
+      </div>
+    </div>
+
+    <!-- EOI / Register -->
+    <div class="eoi-section" id="register">
+      <h2>Ready to Level Up Your Product Skills?</h2>
+      <p>Secure your spot in the next cohort. Register your Expression of Interest today — spaces are limited and fill fast.</p>
+      <a class="eoi-btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=9DauneYNTkqnGD3BHlCfOHxLskRxt29ClOwouniO3kdUMUs1WU45QUZXQlE4TVpYVjg4SVZRUkhTQy4u" target="_blank" rel="noopener noreferrer">Register Your Expression of Interest →</a>
     </div>
 
   </div><!-- /card -->
