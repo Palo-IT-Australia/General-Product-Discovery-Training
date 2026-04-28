@@ -6,7 +6,7 @@ General training activity for Product Discovery using Google Design Sprint metho
 
 The course landing page (`root/index.html`) is automatically published to GitHub Pages on every push to `main` via the [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) workflow.
 
-**Live URL:** `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/`
+**Live URL:** `https://palo-it-australia.github.io/AI-Powered-Product-Ownership/`
 
 The workflow:
 1. Checks out the repository.
@@ -20,11 +20,11 @@ The workflow:
 
 | File in repository | Published URL |
 |---|---|
-| `root/index.html` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/` |
-| `root/styles.css` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/styles.css` |
-| `root/images/logo.png` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/images/logo.png` |
+| `root/index.html` | `https://palo-it-australia.github.io/AI-Powered-Product-Ownership/` |
+| `root/styles.css` | `https://palo-it-australia.github.io/AI-Powered-Product-Ownership/styles.css` |
+| `root/images/logo.png` | `https://palo-it-australia.github.io/AI-Powered-Product-Ownership/images/logo.png` |
 
-So yes — visiting `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/` will serve `root/index.html` directly.
+So yes — visiting `https://palo-it-australia.github.io/AI-Powered-Product-Ownership/` will serve `root/index.html` directly.
 
 > **One-time setup required:** In the repository **Settings → Pages → Build and deployment**, set the source to **GitHub Actions** to enable deployments.
 
